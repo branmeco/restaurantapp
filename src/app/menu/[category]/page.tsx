@@ -1,3 +1,4 @@
+import { ProductType } from '@/types/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -20,7 +21,7 @@ type Props = {
 
 const CategoryPage = async ({params}:Props) => {
 
-  const products = await getData(params.category);
+  const products:ProductType[] = await getData(params.category);
 
   return (
     <div className='flex flex-wrap text-red-500'>

@@ -3,8 +3,9 @@ import Menu from './Menu';
 import Link from 'next/link';
 import CartIcon from './CartIcon';
 import Image from 'next/image';
+import UserLinks from './UserLinks';
 
-function Navbar() {
+const Navbar = () => {
   const user = false;
   return (
     <div className='h-12 text-red-500 p-4 flex items-center justify-between border-b-2 border-b-red-500 uppercase md:h-24 lg:px-20 xl:px-40'>
@@ -28,11 +29,7 @@ function Navbar() {
           <Image src="/phone.png" alt="" width={20} height={20} />
           <span>123 456 789</span>
         </div>
-        {!user ? (
-          <Link href="/login">Login</Link>
-        ) : (
-          <Link href="/orders">Orders</Link>
-        )}
+        <UserLinks/>
         <CartIcon />
       </div>
     </div>
