@@ -19,7 +19,7 @@
 import React, { useState, useEffect } from "react";
 
 const CountDown = () => {
-  
+
   let difference = +new Date(`10/10/2023`) - +new Date();
   const [delay, setDelay] = useState(difference);
 
